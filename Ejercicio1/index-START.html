@@ -58,7 +58,7 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-  window.addEventListener('keydown', function(e){
+  window.addEventListener('keydown', function(e) {
     if (!audio) {
       return;
     }
@@ -69,7 +69,7 @@
     key.classList.add('playing');
   });
 
-  function removeTransition(e){
+  function removeTransition(e) {
     if (e.propertyName !== 'transform') {
       return;
     }
