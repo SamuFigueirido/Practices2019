@@ -17,6 +17,18 @@
   let isDrawing = false;
   let lastX = 0;
   let lastY = 0;
+
+function draw(event) {
+  if(!isDrawing) {
+    return;
+  }
+  console.log(event);
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(event.offsetX, event.offsetY);
+  ctx.stroke();
+  [lastX, lastY] = [event.offsetX, event.offsetY];
+}
 </script>
 
 <style>
