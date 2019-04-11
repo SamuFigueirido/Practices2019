@@ -122,17 +122,14 @@
 
   <script>
     const panels = document.querySelectorAll('.panel');
-    function toggleOpen() {
-      this.classList.toggle('open');
-    }
-    function toggleActive(event) {
-      if (event.propertyName.includes('flex')) {
-        this.classList.toggle('open-active');
-      }
-    }
+    
     panels.forEach(panel => {
-      panel.addEventListener('click', toggleOpen);
-      panel.addEventListener('transitionend', toggleActive)
+      panel.addEventListener('click', () => panel.classList.toggle('open'));
+      panel.addEventListener('transitionend', (event) => {
+        if (event.propertyName.includes('flex')) {
+          event.target.classList.toggle('open-active');
+        }
+      });
     });
     
   </script>
