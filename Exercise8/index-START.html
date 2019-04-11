@@ -14,20 +14,29 @@
   ctx.strokeStyle = '#BADA55';
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
+  ctx.lineWidth= 100;
+
   let isDrawing = false;
   let lastX = 0;
   let lastY = 0;
+  let color = 0;
 
 function draw(event) {
   if(!isDrawing) {
     return;
   }
   console.log(event);
+  ctx.strokeStyle = `hsl(${color}, 100%, 50%)`;
+  ctx.lineWidth= color;
   ctx.beginPath();
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(event.offsetX, event.offsetY);
   ctx.stroke();
   [lastX, lastY] = [event.offsetX, event.offsetY];
+  color++;
+  if(color > 360){
+    color = 0;
+  }
 }
 
 canvas.addEventListener('mousedown', (event) => {isDrawing = true; [lastX, lastY] = [event.offsetX, event.offsetY];});
