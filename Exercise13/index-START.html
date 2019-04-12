@@ -148,7 +148,8 @@
     function debounce(func, wait = 20, immediate = true) {
       const timeout;
       return () => {
-        const context = this, args = arguments;
+        const context = this;
+        const args = arguments;
         const later = () => {
           timeout = null;
           if (!immediate) {
