@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>JS Reference VS Copy</title>
 </head>
+
 <body>
 
   <script>
@@ -41,7 +43,7 @@
     team2[3] = 'Lux';
     console.log(team2, players);
     // one way
-    
+
     // or create a new array and concat the old one in
     const team3 = [].concat(players);
     console.log(team3);
@@ -66,10 +68,10 @@
     // const captain = person;
     // captain.age = 99;
     // how do we take a copy instead?
-    const cap2 = Object.assign({}, person, {age: 99});
+    const cap2 = Object.assign({}, person, { age: 99 });
     console.log(person, cap2);
     // We will hopefully soon see the object ...spread
-    const cap3 = {...person};
+    const cap3 = { ...person };
     console.log(cap3);
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
     const guy = {
@@ -90,4 +92,5 @@
   </script>
 
 </body>
+
 </html>
