@@ -7,6 +7,12 @@
 </head>
 <body>
 <script>
+  const keysPressed = [];
+  const secretCode = 'shit';
+  window.addEventListener('keyup', (event) => {
+    keysPressed.push(event.key);
+    console.log(keysPressed);
+  });
 </script>
 </body>
 </html>
