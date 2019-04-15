@@ -44,7 +44,9 @@
         panel.classList.toggle('open');
       });
       panel.addEventListener('transitionend', function(event){
-        event.target.classList.toggle('open-active');
+        if (event.propertyName.indexOf('font') != -1) {
+          panel.classList.toggle('open-active');
+        }
       });
     }
   </script>
