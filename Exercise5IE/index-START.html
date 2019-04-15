@@ -126,14 +126,10 @@
 
   <script>
     const panels = document.querySelectorAll('.panel');
-    const classPanel = [];
     for (let i=0;i<panels.length;i++) {
       const panel = panels[i];
-      classPanel.push(panel.className.split(" "));
-      console.log(classPanel[i]);
       panels[i].addEventListener('click', function(){
-        panel.className += ' open';
-        // panel.classList.toggle('open');
+        panel.classList.toggle('open');
       });
       // panels[i].addEventListener('transitionend', function(event){
       //   console.log('----event');
@@ -145,7 +141,7 @@
       //     // const action = panels[i].className.replace('open', 'open-active');
       //   }
       // // event.target.className.replace(/  /g, ' ');
-      });
+      // });
     }
   </script>
 
