@@ -123,8 +123,9 @@
   <script>
     const panels = document.querySelectorAll('.panel');
     for(let i=0;i<panels.length;i++){
+      console.log(panels[i]);
       panels[i].addEventListener('click', function(){
-        panels[i].classList.toggle('open');
+        panels[i].className += ' open';
       });
       panels[i].addEventListener('transitionend', function(event){
         if (event.propertyName.includes('flex')) {
