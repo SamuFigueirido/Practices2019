@@ -13,10 +13,12 @@
       font-family: 'helvetica neue';
       font-size: 20px;
       font-weight: 200;
+      height:100%;
     }
     
     body {
       margin: 0;
+      height:100%;
     }
     
     *, *:before, *:after {
@@ -25,6 +27,8 @@
 
     .panels {
       min-height: 100vh;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
       display: flex;
     }
@@ -45,6 +49,7 @@
       background-size: cover;
       background-position: center;
       flex:1;
+      flex-basis:auto;
       justify-content: center;
       align-content: center;
       display: flex;
@@ -63,6 +68,7 @@
       width: 100%;
       transition: transform 0.5s;
       flex: 1 0 auto;
+      -js-display: flex;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -125,13 +131,19 @@
     for(let i=0;i<panels.length;i++){
       console.log(panels[i]);
       panels[i].addEventListener('click', function(){
-        panels[i].className += ' open';
+        // panels[i].className += ' open';
       });
-      panels[i].addEventListener('transitionend', function(event){
-        if (event.propertyName.includes('flex')) {
-          event.target.classList.toggle('open-active');
-        }
-      });
+      // panels[i].addEventListener('transitionend', function(event){
+      //   console.log('----event');
+      //   // if (event.propertyName.includes('flex')) {
+      //   // }
+      //   if (event.propertyName.includes('flex')) {
+      //     console.log('----if');
+      //     event.target.className.replace('open', 'open-active');
+      //     // const action = panels[i].className.replace('open', 'open-active');
+      //   }
+      // // event.target.className.replace(/  /g, ' ');
+      // });
     }
   </script>
 
