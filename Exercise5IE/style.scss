@@ -1,17 +1,21 @@
+$weight-height: 100%;
+$font-size: 20px;
+$font-size-em: 2em;
+
 html {
   box-sizing: border-box;
   background: #ffc600;
   font: {
     family: "helvetica neue";
-    size: 20px;
+    size: $font-size;
     weight: 200;
   }
-  height: 100%;
+  height: $weight-height;
 }
 
 body {
   margin: 0;
-  height: 100%;
+  height: $weight-height;
 }
 
 *,
@@ -22,7 +26,7 @@ body {
 
 .panels {
   min-height: 100vh;
-  height: 100%;
+  height: $weight-height;
   overflow: hidden;
   display: flex;
 }
@@ -36,7 +40,7 @@ body {
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     background 0.2s;
-  font-size: 20px;
+  font-size: $font-size;
   justify-content: center;
   align: {
     items: center;
@@ -80,13 +84,13 @@ body {
 }
 
 .panel > *:first-child {
-  transform: translateY(-100%);
+  transform: translateY(-$weight-height);
 }
 .panel.open-active > *:first-child {
   transform: translateY(0);
 }
 .panel > *:last-child {
-  transform: translateY(100%);
+  transform: translateY($weight-height);
 }
 .panel.open-active > *:last-child {
   transform: translateY(0);
@@ -99,15 +103,15 @@ body {
   }
   font: {
     family: "Amatic SC", cursive;
-    size: 2em;
+    size: $font-size-em;
   }
 }
 
 .panel p:nth-child(2) {
-  font-size: 4em;
+  font-size: 2*$font-size-em;
 }
 
 .panel.open {
   flex: 5;
-  font-size: 40px;
+  font-size: 2*$font-size;
 }
