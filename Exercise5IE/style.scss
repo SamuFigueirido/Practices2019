@@ -23,7 +23,13 @@ $box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
   }
 }
 
-$list-images: ('https://source.unsplash.com/gYl-UtwNg_I/1500x1500', 'https://source.unsplash.com/rFKUFzjPYiQ/1500x1500', 'https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d', 'https://source.unsplash.com/ITjiVXcwVng/1500x1500', 'https://source.unsplash.com/3MNzGlQM7qs/1500x1500');
+$list-images: (
+  "https://source.unsplash.com/gYl-UtwNg_I/1500x1500",
+  "https://source.unsplash.com/rFKUFzjPYiQ/1500x1500",
+  "https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d",
+  "https://source.unsplash.com/ITjiVXcwVng/1500x1500",
+  "https://source.unsplash.com/3MNzGlQM7qs/1500x1500"
+);
 
 html {
   box-sizing: border-box;
@@ -119,10 +125,10 @@ $count: 0;
     family: "Amatic SC", cursive;
     size: $font-size-em;
   }
-  @include font-size-child(2*$font-size-em);
+  @include font-size-child(2 * $font-size-em);
 }
 
 .panel.open {
   flex: 5;
-  font-size: 2*$font-size;
+  font-size: 2 * $font-size;
 }
