@@ -9,6 +9,9 @@ $text-shadow-panel2: 0 0 14px rgba(0, 0, 0, 0.45);
 @mixin background-image($url) {
   background-image: url($url);
 }
+@mixin transform($transform) {
+  transform: translateY($transform);
+}
 
 html {
   box-sizing: border-box;
@@ -92,16 +95,16 @@ body {
 }
 
 .panel > *:first-child {
-  transform: translateY(-$weight-height);
+  @include transform(-$weight-height);
 }
 .panel.open-active > *:first-child {
-  transform: translateY(0);
+  @include transform(0);
 }
 .panel > *:last-child {
-  transform: translateY($weight-height);
+  @include transform($weight-height);
 }
 .panel.open-active > *:last-child {
-  transform: translateY(0);
+  @include transform(0);
 }
 
 .panel p {
