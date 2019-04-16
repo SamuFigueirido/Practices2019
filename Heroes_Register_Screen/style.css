@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "ShieldFont";
+  src: url("Bank Gothic Medium.ttf") format("truetype");
+}
+* {
+  font-family: "ShieldFont";
+}
+
+/*# sourceMappingURL=style.css.map */
