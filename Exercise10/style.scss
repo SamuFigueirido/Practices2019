@@ -1,42 +1,45 @@
+@import "variables";
+
 html {
   font-family: sans-serif;
   background: #ffc600;
 }
 
 .inbox {
-  max-width: 400px;
-  margin: 50px auto;
+  max-width: $size-px * 20;
+  margin: $margin;
   background: white;
-  border-radius: 5px;
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: $size-px/4;
+  box-shadow: $box-shadow;
 }
 
 .item {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F1F1F1;
+  border-bottom: $border-bottom;
+  &:last-child {
+    border-bottom: 0;
+  }
 }
 
-.item:last-child {
-  border-bottom: 0;
+input {
+  &:checked + p {
+    background: #f9f9f9;
+    text-decoration: line-through;
+  }
+  &[type="checkbox"] {
+    margin: $size-px;
+  }
 }
-
-input:checked+p {
-  background: #F9F9F9;
-  text-decoration: line-through;
-}
-
-input[type="checkbox"] {
-  margin: 20px;
-}
-
 p {
   margin: 0;
-  padding: 20px;
-  transition: background 0.2s;
+  padding: $size-px;
+  transition: $transition;
   flex: 1;
-  font-family: 'helvetica neue';
-  font-size: 20px;
-  font-weight: 200;
-  border-left: 1px solid #D1E2FF;
+  font: {
+    family: "helvetica neue";
+    size: $size-px;
+    weight: 200;
+  }
+  border-left: $border-left;
 }
