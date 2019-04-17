@@ -11,112 +11,113 @@
 </head>
 
 <body>
-  <header class="container">
-    <p></p>
-    <div class="row">
-      <p class="col-sm-1"><img class="logo"
-          src="https://seeklogo.com/images/S/s-h-i-e-l-d-logo-F89847BD30-seeklogo.com.png" width="50" height="50"></p>
-      <h1 class="col-sm-4">S.H.I.E.L.D.</h1>
-      <div class="row">
-        <div class="col-sm-4">
-          <nav class="col-sm-5 text-right">
-            <a>Heroes</a>
-          </nav>
-        </div>
-        <div class="col-sm-4">
-          <nav class="col-sm-5 text-right">
-            <a>Spies</a>
-          </nav>
-        </div>
-        <div class="col-sm-4">
-          <nav class="col-sm-5 text-right">
-            <a>Contact</a>
-          </nav>
-        </div>
-      </div>
+  <header class="navbar navbar-dark bg-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand" href="#">
+      <img src="https://seeklogo.com/images/S/s-h-i-e-l-d-logo-F89847BD30-seeklogo.com.png" width="40" height="40"
+        class="d-inline-block align-top">
+      <h7>S.H.I.E.L.D.</h7>
+    </a>
+    <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Heroes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Spies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
     </div>
   </header>
 
   <section class="container">
-      <div class="row">
-        <div class="col-sm-5">
-          <div class="row">
-            <h2 class="col-sm-12">Nick Fury</h2>
-          </div>
-          <div class="row">
-            <img class="image" src="https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/25606.jpg"
-              width="300" height="200">
-            <div class="col-sm-4">Nicholas Joseph Fury is a fictional character appearing in American comic books
-              published by Marvel Comic.</div>
-          </div>
-          <div class="row">Created by writer/artist Jack Kirby and writer Stan Lee, Fury first appeared
-            in Sgt. Fury and his Howling Commandos #1 (May 1963), a World War II combat series that portrayed the
-            cigar-chomping Fury as leader of an elite U.S. Army unit. A popular character over a number of decades,
-            in 2011, Fury was ranked 33rd in IGN's Top 100 Comic Book Heroes, and 32nd in their list of "The Top 50
-            Avengers". He has sometimes been considered an antihero.</div>
-          <a href="https://en.wikipedia.org/wiki/Nick_Fury">More about Nick Fury</a>
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="row">
+          <h2 class="col-sm-12">Nick Fury</h2>
         </div>
-        <div class="col-sm-7">
-          <form>
-            <div class="form-group">
-              <div class="row">
-                <label class="name">Full name:</label>
-                <input type="text" class="form-control" id="txtname" placeholder="Example: Nick Fury">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <label class="age">Age:</label>
-                <input type="number" class="form-control" id="txtage" placeholder="Example: 54">
-              </div>
-            </div>What are you?:
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="radio" value="hero" id="chbhero" checked>
-              <label>
-                Hero
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="radio" value="spy" id="chbspy">
-              <label>
-                Spy
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="radio" value="other" id="chbother">
-              <label>
-                Other
-              </label>
-            </div>Do you use guns?:
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="radio" value="hero" id="chbhero">
-              <label>
-                Fireguns
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="radio" value="spy" id="chbspy">
-              <label>
-                My fists
-              </label>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">City
-                <span class="caret"></span></button>
-                <div class="dropdown-menu">
-                  <a href="#">New York</a>
-                  <a href="#">Manhattan</a>
-                  <a href="#">Los Angeles</a>
-                </div>
-              </div>
-          </form>
+        <div class="row">
+          <img class="image" src="https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/25606.jpg"
+            width="300" height="200">
+          <div class="col-sm-4">Nicholas Joseph Fury is a fictional character appearing in American comic books
+            published by Marvel Comic.</div>
         </div>
+        <div class="row">Created by writer/artist Jack Kirby and writer Stan Lee, Fury first appeared
+          in Sgt. Fury and his Howling Commandos #1 (May 1963), a World War II combat series that portrayed the
+          cigar-chomping Fury as leader of an elite U.S. Army unit. A popular character over a number of decades,
+          in 2011, Fury was ranked 33rd in IGN's Top 100 Comic Book Heroes, and 32nd in their list of "The Top 50
+          Avengers". He has sometimes been considered an antihero.</div>
+        <a href="https://en.wikipedia.org/wiki/Nick_Fury">More about Nick Fury</a>
       </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-6">
+        <form>
+          <div class="form-group">
+            <div class="row">
+              <label class="name">Full name:</label>
+              <input type="text" class="form-control" id="txtname" placeholder="Example: Nick Fury">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <label class="age">Age:</label>
+              <input type="number" class="form-control" id="txtage" placeholder="Example: 54">
+            </div>
+          </div>What are you?:
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" value="hero" id="chbhero" checked>
+            <label>
+              Hero
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" value="spy" id="chbspy">
+            <label>
+              Spy
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" value="other" id="chbother">
+            <label>
+              Other
+            </label>
+          </div>Do you use guns?:
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="radio" value="hero" id="chbhero">
+            <label>
+              Fireguns
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="radio" value="spy" id="chbspy">
+            <label>
+              My fists
+            </label>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">City
+              <span class="caret"></span></button>
+            <div class="dropdown-menu">
+              <a href="#">New York</a>
+              <a href="#">Manhattan</a>
+              <a href="#">Los Angeles</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </section>
 
   <footer class="container">
     <div class="row">
       <p class="col-sm-4">&copy; 2019 S.H.I.E.L.D.</p>
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-success">Submit</button>
+        <button type="button" class="btn btn-danger">Cancel</button>
+      </div>
     </div>
   </footer>
 </body>
