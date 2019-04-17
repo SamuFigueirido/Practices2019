@@ -4,7 +4,12 @@
 }
 * {
   font-family: "ShieldFont";
-  text-align: justify;
+}
+
+.nav-item {
+  margin-left: 4%;
+  margin-right: 4%;
+  text-align: left;
 }
 
 footer {
@@ -13,6 +18,12 @@ footer {
 
 section {
   margin-top: 2%;
+  text-align: justify;
 }
 
+.title {
+  color: white;
+  font-size: 25px;
+  margin-right: 1.5%;
+}
 /*# sourceMappingURL=style.css.map */
