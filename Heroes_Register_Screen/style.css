@@ -19,6 +19,8 @@ footer {
 section {
   margin-top: 2%;
   text-align: justify;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .title {
@@ -26,4 +28,10 @@ section {
   font-size: 25px;
   margin-right: 1.5%;
 }
-/*# sourceMappingURL=style.css.map */
+
+#navbar-toggle-cbox {
+  display:none
+}
+#navbar-toggle-cbox:checked ~ .collapse {
+    display: block;
+}
