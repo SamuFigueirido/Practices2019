@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <header class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
       <img src="https://seeklogo.com/images/S/s-h-i-e-l-d-logo-F89847BD30-seeklogo.com.png" width="40" height="40"
         class="d-inline-block align-top"></a>
@@ -21,10 +21,10 @@
 
     <div class="navbar-header">
 
-      <label for="navbar-toggle-cbox" class="button navbar-toggler" data-toggle="collapse"
-        data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <label for="navbar-toggle-cbox" class="navbar-toggler" data-toggle="collapse" data-target="#navbar"
+        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span><span></span><span></span><span></span><span></span>
-    </label></div>
+      </label></div>
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -50,8 +50,7 @@
         <div class="card-body">
           <h2 class="card-title">Nick Fury</h2>
           <h6 class="card-subtitled text-muted mb-2">The boss of S.H.I.E.L.D.</h6>
-            <img class="img-fluid"
-              src="https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/25606.jpg">
+          <img class="img-fluid" src="https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/25606.jpg">
           <p class="card-text bd-content">Nicholas Joseph Fury is a fictional character appearing in American
             comic books
             published by Marvel Comics.</p>
@@ -124,14 +123,13 @@
     </div>
   </section>
 
-  <footer class="container">
-    <div class="row">
-      <p class="col-sm-4">&copy; 2019 S.H.I.E.L.D.</p>
-      <div class="col-sm-4"></div>
-      <div class="col-sm-4">
-        <button type="button" class="btn btn-success">Submit</button>
-        <button type="button" class="btn btn-danger">Cancel</button>
-      </div>
+  <footer class="navbar navbar-expand-lg fixed-bottom navbar-dark bg-light">
+    <div class="col-6">
+      <div class="col-xs-12 col-md-12 col-xl-12">&copy; 2019 S.H.I.E.L.D.</div>
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn-success">Submit</button>
+        <button type="button" class="btn-danger">Cancel</button>
     </div>
   </footer>
 </body>
