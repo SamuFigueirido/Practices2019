@@ -1,0 +1,45 @@
+@import "variables";
+
+html {
+  font-family: sans-serif;
+  background: #ffc600;
+}
+
+.inbox {
+  max-width: $size-px * 20;
+  margin: $margin;
+  background: white;
+  border-radius: $size-px/4;
+  box-shadow: $box-shadow;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: $border-bottom;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+input {
+  &:checked + p {
+    background: #f9f9f9;
+    text-decoration: line-through;
+  }
+  &[type="checkbox"] {
+    margin: $size-px;
+  }
+}
+p {
+  margin: 0;
+  padding: $size-px;
+  transition: $transition;
+  flex: 1;
+  font: {
+    family: "helvetica neue";
+    size: $size-px;
+    weight: 200;
+  }
+  border-left: $border-left;
+}
