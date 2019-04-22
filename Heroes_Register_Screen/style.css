@@ -17,28 +17,28 @@ header {
 }
 
 section {
-  margin-top: 5%;
-}
-
-.card.col-12 {
-  margin-top: 5%;
-  margin-bottom: 7%;
-}
-
-form {
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 15%;
+  padding-top: 5%;
 }
 
 footer {
-  margin-top: 5%;
   background-color: rgb(100, 100, 100);
+}
+
+.container {
+  padding-top: 90px;
+  padding-bottom: 70px;
 }
 
 body {
   background-color: darkgrey;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.form {
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 2%;
 }
 
 .img-fluid {
