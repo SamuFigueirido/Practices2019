@@ -24,6 +24,18 @@ footer {
   background-color: rgb(100, 100, 100);
 }
 
+.card {
+  max-height: 530px;
+}
+
+.noresize {
+  resize: none; 
+}
+
+.multiselect {
+  padding-top: 15px;
+}
+
 .container {
   padding-top: 90px;
   padding-bottom: 70px;
@@ -54,6 +66,10 @@ section {
   color: black;
   font-size: 25px;
   margin-right: 1.5%;
+}
+
+.md-form {
+  padding-top: 15px;
 }
 
 #navbar-toggle-cbox {
