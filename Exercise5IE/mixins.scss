@@ -1,11 +1,11 @@
 @mixin background-image($url) {
-    background-image: url($url);
+  background-image: url($url);
+}
+@mixin transform($transform) {
+  transform: translateY($transform);
+}
+@mixin font-size-child($size) {
+  &:nth-child(2) {
+    font-size: $size;
   }
-  @mixin transform($transform) {
-    transform: translateY($transform);
-  }
-  @mixin font-size-child($size) {
-    &:nth-child(2) {
-      font-size: $size;
-    }
-  }
+}
