@@ -12,20 +12,18 @@
   text-align: right;
 }
 
-header {
-  background-color: rgb(100, 100, 100);
-}
-
 section {
   padding-top: 5%;
 }
 
-footer {
+footer, header {
   background-color: rgb(100, 100, 100);
+  position: fixed;
+  overflow: hidden;
 }
 
 .card {
-  max-height: 530px;
+  max-height: 560px;
 }
 
 .noresize {
@@ -37,20 +35,33 @@ footer {
 }
 
 .container {
+  height: 100%;
   padding-top: 90px;
-  padding-bottom: 70px;
+  /* padding-bottom: 70px; */
+  display: flex;
+  flex-direction: column;
 }
 
 body {
+  margin: 0;
+  height: 100%;
   background-color: darkgrey;
   padding-left: 5%;
   padding-right: 5%;
 }
 
+.card {
+  overflow: hidden;
+}
+
 .form {
+  height: 600px;
   padding-left: 5%;
-  padding-top: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
   padding-bottom: 2%;
+  flex: 1;
+  overflow: auto;
 }
 
 .img-fluid {
