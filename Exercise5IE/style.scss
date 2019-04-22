@@ -1,0 +1,109 @@
+@import "variables";
+@import "mixins";
+
+$list-images: (
+  "https://source.unsplash.com/gYl-UtwNg_I/1500x1500",
+  "https://source.unsplash.com/rFKUFzjPYiQ/1500x1500",
+  "https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d",
+  "https://source.unsplash.com/ITjiVXcwVng/1500x1500",
+  "https://source.unsplash.com/3MNzGlQM7qs/1500x1500"
+);
+
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font: {
+    family: "helvetica neue";
+    size: $font-size;
+    weight: 200;
+  }
+  height: $weight-height;
+}
+
+body {
+  margin: 0;
+  height: $weight-height;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  height: $weight-height;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background: #6b0f9c;
+  box-shadow: $box-shadow;
+  color: white;
+  text-align: $center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: $transition1, $transition2, $transition3;
+  font-size: $font-size;
+  justify-content: $center;
+  align: {
+    items: $center;
+    content: $center;
+  }
+  display: flex;
+  background: {
+    size: cover;
+    position: $center;
+  }
+  flex: 1 {
+    basis: auto;
+    direction: column;
+  }
+  > * {
+    margin: 0;
+    transition: transform 0.5s;
+    flex: $flex-panel;
+    display: flex;
+    justify-content: $center;
+    align-items: $center;
+  }
+  p {
+    text: {
+      transform: uppercase;
+      shadow: $text-shadow-panel1, $text-shadow-panel2;
+    }
+    font: {
+      family: "Amatic SC", cursive;
+      size: $font-size-em;
+    }
+    @include font-size-child(2 * $font-size-em);
+  }
+  > *:first-child {
+    @include transform(-$weight-height);
+  }
+  > *:last-child {
+    @include transform($weight-height);
+  }
+  &.open {
+    flex: 5;
+    font-size: 2 * $font-size;
+  }
+  &.open-active {
+    > *:first-child {
+      @include transform(0);
+    }
+    > *:last-child {
+      @include transform(0);
+    }
+  }
+}
+
+$count: 0;
+@each $image in $list-images {
+  $count: $count + 1;
+  .panel#{$count} {
+    @include background-image($image);
+  }
+}
