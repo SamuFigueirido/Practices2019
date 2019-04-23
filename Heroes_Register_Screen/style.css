@@ -37,7 +37,7 @@ footer, header {
 .container {
   height: 100%;
   padding-top: 90px;
-  /* padding-bottom: 70px; */
+  padding-bottom: 70px;
   display: flex;
   flex-direction: column;
 }
