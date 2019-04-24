@@ -47,8 +47,8 @@
     const itemsList = document.querySelector('.plates');
     const items = JSON.parse(localStorage.getItem('items')) || [];
 
-    function addItem(e) {
-      e.preventDefault();
+    function addItem(event) {
+      event.preventDefault();
       const text = (this.querySelector('[name=item]')).value;
       const item = {
         text,
@@ -72,12 +72,12 @@
       }).join('');
     }
 
-    function toggleDone(e) {
-      if (!e.target.matches('input')) {
+    function saveCheck(event) {
+      if (!event.target.matches('input')) {
         return;
       }
-      const el = e.target;
-      const index = el.dataset.index;
+      const infoCheckbox = event.target;
+      const index = infoCheckbox.dataset.index;
       items[index].done = !items[index].done;
       localStorage.setItem('items', JSON.stringify(items));
       populateList(items, itemsList);
@@ -85,7 +85,7 @@
 
     addItems.addEventListener('submit', addItem);
 
-    itemsList.addEventListener('click', toggleDone);
+    itemsList.addEventListener('click', saveCheck);
     
     populateList(items, itemsList);
   </script>
