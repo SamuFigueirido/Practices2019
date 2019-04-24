@@ -146,35 +146,45 @@
   </div>
 
   <script>
-    function debounce(func, wait = 20, immediate = true) {
+    function debounce(func, wait, immediate) {
+      if (wait === undefined) {
+        wait = 20;
+      }
+      if (immediate === undefined) {
+        immediate = true;
+      }
       var timeout;
       return function () {
         var context = this, args = arguments;
         var later = function () {
           timeout = null;
-          if (!immediate) func.apply(context, args);
+          if (!immediate) {
+            func.apply(context, args);
+          }
         };
         var callNow = immediate && !timeout;
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
+        if (callNow) {
+          func.apply(context, args);
+        }
       };
     };
 
     const sliderImages = document.querySelectorAll('.slide-in');
 
     function checkSlide() {
-      sliderImages.forEach(sliderImage => {
-        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
-        const imageBottom = sliderImage.offsetTop + sliderImage.height;
-        const isHalfShown = slideInAt > sliderImage.offsetTop;
-        const isNotScrolledPast = window.scrollY < imageBottom;
+      for (i = 0; i < sliderImages.length; i++) {
+        const slideInAt = (window.pageYOffset + window.innerHeight) - sliderImages[i].height / 2;
+        const imageBottom = sliderImages[i].offsetTop + sliderImages[i].height;
+        const isHalfShown = slideInAt > sliderImages[i].offsetTop;
+        const isNotScrolledPast = window.pageYOffset < imageBottom;
         if (isHalfShown && isNotScrolledPast) {
-          sliderImage.classList.add('active');
+          sliderImages[i].classList.add('active');
         } else {
-          sliderImage.classList.remove('active');
+          sliderImages[i].classList.remove('active');
         }
-      });
+      }
     }
 
     window.addEventListener('scroll', debounce(checkSlide));
